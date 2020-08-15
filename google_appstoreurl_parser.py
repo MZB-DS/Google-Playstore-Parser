@@ -72,6 +72,6 @@ for rows_num in tqdm(range(0, input_df.shape[0])):
     print(apps_by_developer)
     print("\n")
 
-    output_df = pd.DataFrame(output_df_list ,columns = ["Company Name","Website","PlayStore Urls"])
+    output_df = pd.DataFrame(output_df_list ,columns = ["Company Name","Website","PlayStore Urls"]) # Rename column names for your output file here
 
     output_df.to_excel("appstoreurl_output.xlsx",index=False) # Enter the name of your desrired output file here
