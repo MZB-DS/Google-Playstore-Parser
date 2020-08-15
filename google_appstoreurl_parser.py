@@ -13,9 +13,9 @@ from urllib.request import urlopen as uReq
 import urllib.parse
 
 options = Options()
-options.headless = True
+options.headless = True #This will help to open our browser in the background
 
-input_df = pd.read_excel("input_appstoreurl.xlsx")
+input_df = pd.read_excel("input_appstoreurl.xlsx") # Enter the name of your input file. Please refer the sample input file in the repository for the format.
 
 output_df_list = []
 
@@ -74,4 +74,4 @@ for rows_num in tqdm(range(0, input_df.shape[0])):
 
     output_df = pd.DataFrame(output_df_list ,columns = ["Company Name","Website","PlayStore Urls"])
 
-    output_df.to_excel("appstoreurl_output.xlsx",index=False)
+    output_df.to_excel("appstoreurl_output.xlsx",index=False) # Enter the name of your desrired output file here
